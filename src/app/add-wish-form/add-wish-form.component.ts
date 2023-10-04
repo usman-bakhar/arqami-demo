@@ -1,5 +1,4 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-// import { WishItem } from 'src/shared/models/wishItem';
 import { WishItem } from 'src/shared/modals/wishItem';
 
 

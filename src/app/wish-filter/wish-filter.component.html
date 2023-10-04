@@ -1,11 +1,5 @@
-<div class="col-sm-2">
-    <select 
-        class="form-select"
-        [(ngModel)]="listFilter"
-        (ngModelChange)="updateFilter($event)"
-    >
-        <option value="0">All</option>
-        <option value="1">Unfulfilled</option>
-        <option value="2">Fulfilled</option>
-    </select>
+<div class="wrapper">
+    <button type="button" (click)="updateFilter('0',0)" [class.active]="activeFilterIndex === 0">All</button>
+    <button type="button" (click)="updateFilter('1',1)" [class.active]="activeFilterIndex === 1">Unfulfilled</button>
+    <button type="button" (click)="updateFilter('2',2)" [class.active]="activeFilterIndex === 2">Fulfilled</button>
 </div>

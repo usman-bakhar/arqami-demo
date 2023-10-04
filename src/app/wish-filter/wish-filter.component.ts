@@ -3,9 +3,9 @@ import { WishItem } from 'src/shared/modals/wishItem';
 
 
 const filters = [
-  (item : WishItem) => item,
-  (item : WishItem) => !item.isComplete,
-  (item : WishItem) => item.isComplete
+  (item: WishItem) => item,
+  (item: WishItem) => !item.isComplete,
+  (item: WishItem) => item.isComplete
 ];
 
 @Component({
@@ -16,18 +16,20 @@ const filters = [
 export class WishFilterComponent implements OnInit {
   @Input() filter: any;
   @Output() filterChange = new EventEmitter<any>();
-
+  
   constructor() { }
-
+  
   ngOnInit(): void {
-    this.updateFilter('0');
+    this.updateFilter('0', 0);
   }
+  
+  activeFilterIndex: number = 0;
+  listFilter: any = '0';
 
-  listFilter : any = '0';
-
-  updateFilter(value : any) {
+  updateFilter(value: any, index: number) {
     this.filter = filters[value];
     this.filterChange.emit(this.filter);
+    this.activeFilterIndex = index;
   }
 }
 
