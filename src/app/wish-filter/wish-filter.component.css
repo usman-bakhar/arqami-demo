@@ -6,6 +6,7 @@
     border: none;
     background-color: transparent;
     padding: 1rem 3rem 0.5rem;
+    color: #000;
 }
 
 .wrapper button:hover {

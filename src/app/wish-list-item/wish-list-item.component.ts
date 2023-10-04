@@ -12,8 +12,6 @@ export class WishListItemComponent implements OnInit {
   @Input() wish! : WishItem;
 
   get cssClasses() {
-    //return this.fullfilled ? ['strikeout','text-muted'] : [];
-
     return {'strikeout text-muted': this.wish.isComplete};
   }
   constructor() { }
